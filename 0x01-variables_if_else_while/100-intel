@@ -1,0 +1,12 @@
+#!/bin/bash
+CFILE=$1
+if [ ! -f "CFILE" ]; then
+	echo "Error $CFILE does not exist."
+	exit 1
+fi 
+
+main=$(main "$CFILE" .c)
+TMP_ASP_FILE="/tmp/{$main}.tmp.s"
+gcc -S -masm=intel "$CFILE" -o "$TMP_ASP_FILE"
+OUTPUT_ASP_FILE="${main}.s"
+mv "TMP_ASP_FILE" "OUTPUT_ASP_FILE"

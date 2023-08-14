@@ -3,25 +3,28 @@
  * main - This is the main function
  *
  * Return: This is always 0
+ *
  */
 int main(void)
 {
-	int a;
-	int b;
+	int i = 0;
 
-	for (a = 0; a < 10; a++)
+	while (i < 100)
 	{
-		for (b = a + 1; b < 10; b++)
+		int first_dig  = i / 10;
+		int second_dig = i % 10;
+
+		if (first_dig != second_dig && first_dig < second_dig)
 		{
-			putchar(a + '0');
-			putchar(b + '0');
-			if (a != 8 || b != 9)
+			putchar(first_dig + '0');
+			putchar(second_dig + '0');
+			if (i < 89)
 			{
-				putchar(',');
-				putchar(' ');
+			putchar(',');
+			putchar(' ');
 			}
 		}
-	}	
-	putchar('\n');
+		i++;
+	}
 	return (0);
 }

@@ -6,18 +6,24 @@
  */
 char *rot13(char *word)
 {
-	int i;
-	char b;
+	char *a = word;
+	char *b = word;
+	char j;
 
-	for (i = 0; word[i] != '\0'; i++)
+	while (*a != '\0')
 	{
-		char a = word[i];
-
-		if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
+		if ((*a >= 'a' && *a <= 'z') || (*a >= 'A' && *a <= 'Z'))
 		{
-			b = (a >= 'a' && a <= 'z') ? 'a' : 'A';
-			word[i] = (a - b + 13) % 26 + b;
+			j = (*a >= 'a' && *a <= 'z') ? 'a' : 'A';
+				*b = ((*a - j + 13) % 26) + j;
 		}
+		else
+		{
+			*a = *b;
+		}
+		a++;
+		b++;
 	}
+	*b = '\0';
 	return (word);
 }

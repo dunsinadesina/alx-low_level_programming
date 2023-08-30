@@ -12,4 +12,7 @@ int _sqrt_recursion(long int n);
 int _sqrt_recursion2(long int n, long int i, long int j);
 int is_prime_number(long int n);
 int prime_number_recursive(long int n, long int i);
+int is_palindrome(char *s);
+int _strlen_recursion(char *s);
+int is_palindrome2(char *s, int begin, int end);
 #endif /* MAIN_H */

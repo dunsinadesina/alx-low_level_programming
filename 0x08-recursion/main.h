@@ -15,4 +15,5 @@ int prime_number_recursive(long int n, long int i);
 int is_palindrome(char *s);
 int _strlen_recursion(char *s);
 int is_palindrome2(char *s, int begin, int end);
+int wildcmp(char *s1, char *s2);
 #endif /* MAIN_H */

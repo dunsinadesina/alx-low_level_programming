@@ -10,4 +10,6 @@ int factorial(int n);
 int _pow_recursion(int x, int y);
 int _sqrt_recursion(long int n);
 int _sqrt_recursion2(long int n, long int i, long int j);
+int is_prime_number(long int n);
+int prime_number_recursive(long int n, long int i);
 #endif /* MAIN_H */

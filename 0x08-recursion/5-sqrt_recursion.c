@@ -5,9 +5,9 @@
  * @n: parameter
  * Return: integer
  */
-int _sqrt_recursion(int n)
+int _sqrt_recursion(long int n)
 {
-	int answer;
+	long int answer;
 
 	if (n < 0)
 	{
@@ -37,10 +37,10 @@ int _sqrt_recursion(int n)
  * @j: parameter
  * Return: integer
  */
-int _sqrt_recursion2(int n, int i, int j)
+int _sqrt_recursion2(long int n, long int i, long int j)
 {
-	int square;
-	int middle;
+	long int square;
+	long int middle;
 
 	if (i > j)
 	{

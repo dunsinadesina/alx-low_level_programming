@@ -1,20 +1,39 @@
 #include <stdio.h>
 #include "main.h"
 /**
+ * argument  - main function
+ * @argv: parameter
+ * Return: integer
+ */
+int argument(char *argv[])
+{
+	int count;
+
+	count = 0;
+	while (argv[count] != NULL)
+		count++;
+	return (count);
+}
+/**
  * main - main function
  * @argc: parameter
+ * @argv: parameter
  * Return: 0 or 1
  */
 int main(int argc, char *argv[])
 {
-	int digit, number_arguments;
+	int i, digit, count;
 
-	number_arguments = argc - 1;
-	while (number_arguments >= 0)
+	count = argument(argv);
+	for (i = 0; i < argc; i++)
 	{
-		digit = number_arguments % 10;
+		count++;
+	}
+	while (count > 0)
+	{
+		digit = count % 10;
 		_putchar('0' + digit);
-		number_arguments /= 10;
+		count /= 10;
 	}
 	_putchar('\n');
 	return (0);

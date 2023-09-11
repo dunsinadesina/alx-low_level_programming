@@ -23,7 +23,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 		d->name = (char *)malloc(namelength + 1);
 
 		ownerlength = 0;
-		while (ownerlength != '\0')
+		while (owner[ownerlength] != '\0')
 		{
 			ownerlength++;
 		}
@@ -45,7 +45,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	}
 	else
 	{
-		printf("Erroe\n");
+		printf("Error\n");
 		exit(1);
 	}
 }

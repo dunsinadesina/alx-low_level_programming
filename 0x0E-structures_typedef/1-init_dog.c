@@ -13,35 +13,9 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d != NULL)
 	{
-		int namelength, ownerlength, i;
-
-		namelength = 0;
-		while (name[namelength] != '\0')
-		{
-			namelength++;
-		}
-		d->name = (char *)malloc(namelength + 1);
-
-		ownerlength = 0;
-		while (owner[ownerlength] != '\0')
-		{
-			ownerlength++;
-		}
-		d->owner = (char *)malloc(ownerlength + 1);
-		if (d->name == NULL || d->owner == NULL)
-		{
-			printf("Error\n");
-			exit(1);
-		}
-		for (i = 0; i <= namelength; i++)
-		{
-			d->name[i] = name[i];
-		}
+		d->name = name;
 		d->age = age;
-		for (i = 0; i <= ownerlength; i++)
-		{
-			d->owner[i] = owner[i];
-		}
+		d->owner = owner;
 	}
 	else
 	{

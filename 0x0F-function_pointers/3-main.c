@@ -18,6 +18,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+	if (operator[0] == '/' && num2 == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	if (func == NULL)
 	{
 		printf("Error\n");

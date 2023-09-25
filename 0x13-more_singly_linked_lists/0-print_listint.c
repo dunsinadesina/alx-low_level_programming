@@ -1,19 +1,20 @@
 #include "lists.h"
 /**
  * print_listint - function for printing list
- * @h: parameter
+ * @h: parameter of the head of the list
  * Return: node
  */
 size_t print_listint(const listint_t *h)
 {
+	const listint_t *current_point = h;
 	size_t node;
 
 	node = 0;
-	while (h)
+	while (current_point != NULL)
 	{
-		printf("%d\n", h->n);
+		printf("%d\n", current_point->n);
 		node++;
-		h = h->next;
+		current_point = current_point->next;
 	}
 	return (node);
 }

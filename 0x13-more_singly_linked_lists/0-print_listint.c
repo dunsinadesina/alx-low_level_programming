@@ -2,6 +2,7 @@
 /**
  * print_listint - function for printing list
  * @h: parameter of the head of the list
+ *
  * Return: node
  */
 size_t print_listint(const listint_t *h)

@@ -1,4 +1,11 @@
 #include "hash_tables.h"
+/**
+ * hash_table_get - a function that retrieves a value associated with a key
+ * @ht: pointer parameter to hash table
+ * @key: pointer parameter to key
+ *
+ * Return: value of the key or NULL
+ */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	hash_node_t *node;
